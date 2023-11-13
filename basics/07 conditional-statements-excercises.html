@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //zmienna tempertatura, wartosci -10, 0, 10, 20, 30, 40
+      //info ze wzgledu na temperature
+      // opisy dla kazde temperatury
+      //dla temperatury < -10 zostajemy w domu
+      // dla temperatury > 40 zostaje tez w domu
+
+      // 1 wersja z if else if
+      let temp = 41;
+
+      if (temp < -10) {
+        console.log("jest ponizej -10 zostan w domu");
+      } else if (temp == -10) {
+        console.log("jest zimno - temperatura wynosi -10");
+      } else if (temp == 0) {
+        console.log("temperatura neutralna 0");
+      } else if (temp == 10) {
+        console.log("mamy 10 na plusie robi sie coraz cieplej");
+      } else if (temp == 20) {
+        console.log("temperatura wynosi 20 stopni");
+      } else if (temp == 30) {
+        console.log("temperatura wynosi 30 stopni");
+      } else if (temp == 40) {
+        console.log("temperatura wynosi 40 stopni");
+      } else if (temp > 40) {
+        console.log("jest za goraco zostan w domu");
+      } else console.log("nie jestem w stanie zmierzyc temperatury");
+
+      // 2 wersja switch
+
+      let tem = 40;
+      switch (tem) {
+        case -10:
+          console.log("jest ponizej -10 zostan w domu");
+          break;
+        case 0:
+          console.log("temperatura neutralna 0");
+        case 10:
+          console.log("mamy 10 na plusie robi sie coraz cieplej");
+          break;
+        case 20:
+          console.log("temperatura wynosi 20 stopni");
+          break;
+        case 30:
+          console.log("temperatura wynosi 30 stopni");
+          break;
+        case 40:
+          console.log("temperatura wynosi 40 stopni");
+          break;
+        default:
+          console.log("temperatura poza skala");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // wartosc poczatkowa licznika to -2
+      // sprawdzamy czy jest mniejszy rowny 2
+      // w kazdej literacji musimy srpawdzic czy liczba jest dodatnia czy ujemna i wyswietlic infor za pomoca if czy zero
+
+      //petla for
+
+      for (i = -2; i <= 2; i++) {
+        if (i < 0) {
+          console.log("licznik jest mniejszy od zera:", i);
+        } else if (i > 0) {
+          console.log("licznik jest wiekszy od zera", i);
+        } else {
+          console.log("licznik rowny 0");
+        }
+      }
+
+      // do
+      console.log("petla while do");
+      let s = -2;
+      while (s <= 2) {
+        if (s > 0) {
+          console.log("s jest dodatnie:", s);
+        } else if (s < 0) {
+          console.log("s jest ujemne:", s);
+        } else {
+          console.log("s jest rowne 0");
+        }
+
+        s = s + 1;
+      }
+    </script>
+  </head>
+</html>

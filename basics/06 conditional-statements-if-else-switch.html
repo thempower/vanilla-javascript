@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log();
+      let data = 3;
+      if (data > 5) {
+        console.log("data jest wieksza od liczby 5");
+      }
+      if (data == 5) {
+        console.log("data jest rowna 5");
+      }
+      if (data < 5) {
+        console.log("data jest mniejsza od liczby 5");
+      }
+
+      let age = 15;
+
+      if (age >= 18) {
+        console.log("can vote");
+      } else {
+        console.log("can't vote");
+      }
+
+      let sportRanking = 5;
+
+      if (sportRanking == 1) {
+        console.log("you won");
+      } else if (sportRanking == 2) {
+        console.log("prawie wygrales");
+      } else if (sportRanking == 3) {
+        console.log("masz braz");
+      } else {
+        console.log("jestes poza podium");
+      }
+
+      const x = 10;
+      const y = 10;
+
+      if (x > y) {
+        console.log(" x jest wiekszy od y");
+      } else if (x == y) {
+        console.log("liczby sa sobie rowne");
+      } else {
+        console.log("y jest wiekszy od x");
+      }
+
+      let topSpeed = 1;
+      switch (topSpeed) {
+        case 100:
+          console.log("mala predkosc maksymalna");
+          break;
+        case 150:
+          console.log("predkosc 150 km/h");
+          break;
+        case 200:
+          console.log("200");
+          break;
+        case 250:
+          console.log("predkosc 250 km/h");
+          break;
+        case 310:
+        case 320:
+        case 330:
+          console.log("predkosc powyzej 300 km/h");
+          break;
+        default:
+          console.log("brak informacji dla tej predkosci");
+      }
+    </script>
+  </body>
+</html>

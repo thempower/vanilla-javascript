@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //proste zmiene;
+      let num = 10;
+
+      let car1 = {
+        brand: "Chevrolet",
+        model: "Corvette",
+        year: "1967",
+      };
+
+      console.log(car1);
+      console.log(car1.year);
+      console.log(car1.mode);
+
+      let rocket = {
+        brand: "SpaceX",
+        model: "Falcon",
+        topSpeed: 30000,
+
+        printInfo: function () {
+          console.log(this.brand, this.model, this.topSpeed);
+        },
+      };
+
+      rocket.printInfo();
+    </script>
+  </body>
+</html>

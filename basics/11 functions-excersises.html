@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // funkcja substract
+      //funkcja do obliczania wartosci bezwzglednej czyli dla -2 zwraca 2 oraz dla 2 zwraca 2
+      function substarct(a, b) {
+        let substractResult = a - b;
+        console.log(a);
+        if (a < 0) {
+          a = a * -1;
+          console.log(a);
+        } else if (b < 0) {
+          b = b * -1;
+        }
+        console.log(substractResult);
+      }
+
+      substarct(-5, -5);
+
+      function abs(a) {
+        if (a < 0) return -a;
+        return a;
+      }
+      console.log("wartosc bezwzgledna:", abs(-3));
+    </script>
+  </body>
+</html>
