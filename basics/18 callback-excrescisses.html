@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button1">double click me</button>
+
+    <script>
+      //podpiac callback pod button1 z zdarzeniem dblclick
+      //wyswielt informacje o podwojnym kliknieciu
+      function eventDblClick(event) {
+        console.log("double click");
+        console.log(event);
+        console.log(event.target);
+        console.log(event.target.id);
+      }
+
+      document
+        .getElementById("button1")
+        .addEventListener("dblclick", eventDblClick);
+    </script>
+  </body>
+</html>

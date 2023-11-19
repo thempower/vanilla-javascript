@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function setContenttoHtml(id, content) {
+        let div = document.getElementById(id);
+        div.innerHTML = content;
+      }
+      // zdarzenie load jest wywolane gdy zaladowane sa obrazki, kod html, css i DOM
+      window.addEventListener("load", function () {
+        console.log("load event");
+        setContenttoHtml("content1", "HELLO!WRLD!");
+      });
+
+      window.onload = function () {
+        console.log("onload czyli load event");
+        setContenttoHtml("content2", "HELLO!WRLD222!");
+      };
+    </script>
+    <div id="content1"></div>
+    <div id="content2"></div>
+  </body>
+</html>

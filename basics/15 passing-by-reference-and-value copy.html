@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let data = 10;
+      let info = data; // w typach prostych mamy kopiowanie wartosci
+
+      console.log(data, info);
+
+      data = 33;
+      console.log(data, info); // dwa rozne miejsca z danymi w pamieci
+
+      let obj = {
+        a: 10,
+      };
+
+      let test = obj; // kiedy przypisujemy obiekt do zmiennej/ stalej to nie kopiuejmy wartosci tylko referencje
+      // czyli obie zmienne kieruja do tego samego miejsca w pamieci
+
+      console.log(obj.a, test.a);
+      obj.a = 20;
+      console.log(obj.a, test.a); // obie zmienne wskazuja na to samo miejsce w pamieci
+
+      function something(a, b) {
+        a = 80;
+        return a + b;
+      }
+
+      let someA = 20;
+      let someB = 30;
+      console.log(something(someA, someB));
+      //
+      let objA = {
+        a: 15,
+      };
+
+      let objB = {
+        b: 30,
+      };
+      function foo(obj1, obj2) {
+        objA.a = 30; //wartosc objA.a zostala nadpisana przez referencje z poziomu wywolanej funkcji
+        return objA.a + objB.b;
+      }
+      console.log(foo(objA, objB)); //
+      console.log("wartosci w obiektach", objA.a, objB.b);
+
+      //Tablice
+
+      let arrTest = []; // pusta tablica
+      let arr = [1, 3, 5, 6]; // tablica to tez obiekt
+
+      function checkArr(arr) {
+        arr[0] = 99; //tablica to tez obiekt wiec bedzie a wartosc nadpisana
+        arr.push(8); // dodanie elementu na koniec tablicy;
+      }
+      checkArr(arr);
+      console.log(arr);
+    </script>
+  </body>
+</html>
