@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // String - inaczej zwany jest literaly znakowe lub lancuchowe
+      // ciag znakow UTF-16
+      const s1 = "To jest tekst";
+      const s2 = "To tez jest tekst";
+      const num = 78;
+
+      // literal szablonu
+      const s3 = `string
+      w
+      wielu
+      liniach ${num}
+      wyrazenia js: ${1 + 2 + 3}`;
+      console.log(s3);
+
+      console.log("Tekst".length); // 5 znakow
+      console.log("".length); // 0 znakow
+
+      console.log("tekst"[2]);
+      console.log(s3[s3.length - 1]); //6
+
+      console.log(s3.charAt(2));
+      console.log(s3.charCodeAt(2)); //114
+
+      // wyszukiwanie slow w tekscie
+      let simpleText = "ala ma kota a ania ma psa";
+      let pos = simpleText.indexOf("ania");
+
+      console.log(pos); //ania jest pod 14 indexem
+
+      // wyszukiwanie od konca
+      pos = simpleText.lastIndexOf("ma"); //index 19
+      console.log(pos);
+
+      // drugi argument od ktorego miejsca ma byc rozpoczete wyszukiwanie?
+
+      pos = simpleText.indexOf("ma", 6); // 20;
+      console.log(pos);
+
+      //     wyszukiwanie od konca od 10 indexu
+      pos = simpleText.lastIndexOf("ma", 10);
+      console.log(pos);
+
+      // trim() wycina biale znaki z poczatku i konca;
+      console.log("   tekst cos tam ".trim());
+      console.log(
+        `
+
+      test    `.trim()
+      );
+      //toUpperCase() - powiekszanie do duzych liter;
+      console.log("ala".toUpperCase());
+      //toLowerCase() - pomniejszanie do malych liter;
+      console.log("AlA".toLowerCase());
+    </script>
+  </body>
+</html>
