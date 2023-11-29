@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // boolean - przyjmuje wartosci logiczne : true albo false (slowa kluczowe);
+      let flag = true;
+
+      if (flag == true) {
+        console.log("prawda");
+      }
+
+      if (flag == false) {
+        console.log("prawda"); // nie wykona sie bo flag ma false
+      }
+
+      if (flag) console.log("skrotowo prawda");
+      if (!flag) console.log("skrotowo falsz");
+
+      flag = false;
+      console.log(true); // true;
+      console.log(!true); // false - odwrocona przez !
+      console.log(false); // false
+      console.log(!false); // true - odwrocona
+
+      if (4 > 1) {
+        // wynikiem jest true czy li sie wykona
+        console.log("4 > 1");
+      }
+
+      //falsy values -  " falszywe wartosci" - ktore podczas konwersji na boolean(podczas instrukcji if)
+      // przyjmuja wartosc false
+
+      let data = "";
+      if (data) {
+      }
+
+      // falsy values zawsze konwertowane sa na false!
+      // "" pusty string
+      // 0, -0;
+      // 0n BigInt
+      // NaN
+      // null
+      // undefined
+      // false
+
+      let data3 = null;
+      if (data3) {
+        // null skonfwertowany na false
+        console.log("data3 ma wartosc true");
+      } else {
+        console.log("data3 ma wartosc false");
+      }
+      // data 3 ma wartosc false
+
+      // truthy values zawsze konwertowane sa na true
+      //"tekst"
+      // -1,1, 34 - liczby rozne od 0
+      // [], [4,3,2]
+      // {, {a:1}, window
+      // function test() {}
+
+      let test = function () {};
+      if (test) console.log("Prawda: ", test);
+    </script>
+  </body>
+</html>

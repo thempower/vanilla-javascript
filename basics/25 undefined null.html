@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a; // zmienna jest zadeklarowana
+      console.log(a); // nie ma wartosci zmiennejl
+      if (a == undefined) console.log("brak wartosci");
+
+      // b; // blad oraz ReferenceError: b is not defined
+      //zmienna nie zadeklarowana i nie ma wartosci
+
+      // null - intencjonalne wskazanie ze zmienna nie ma wartosci
+      let test = 5;
+      console.log(test);
+
+      test = null;
+      console.log(test); // null
+      console.log(typeof null);
+
+      if (null)
+        console.log("nie wykona sie, bo null konwertowane jest na false");
+      if (undefined)
+        console.log("nie wykona sie, bo undefined konwertowane jest na false");
+
+      if (null == undefined)
+        console.log("wykona sie, obie wartosci maja false");
+      if (null === undefined)
+        console.log(
+          "nie wykona sie, obie wartosci maja false ale nie zgadza sie typ null ! undefined"
+        );
+    </script>
+  </body>
+</html>
