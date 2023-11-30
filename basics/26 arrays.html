@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //tablice - uporzadkowana kolekcja elementow
+      // tablice nie sa typem a obiektem
+      // moga przechowywac dowolne typy danych proste i zlozone
+      // elementy sa uporzadkowane w postaci indeksow, kazda tablica zaczyna sie od indexu 0
+
+      let a = []; // pusta tablica,
+      let b = [22, "tekst", { a: 1 }, [5, 4, 3], function () {}, null];
+      console.log(b);
+      console.log(b[7]); // undefined
+      console.log(b[b.length - 1]); // ostatnia wartosc tablicy
+
+      b[2] = 99; // nadpisanie wartosci 2-go indeksu;
+      console.log(b);
+
+      let c = new Array(12, "ktest", 9);
+      console.log(c);
+
+      let e = [];
+
+      e[1] = "test1";
+      e[2] = "test2";
+      e[3] = "test3";
+
+      e[e.length] = "test4";
+      console.log(e);
+      e.push("tekst5");
+      console.log(e);
+
+      let f = [0, 1, 2, 3, 4, 5, 6, 7];
+      console.log(f);
+      f.length = 4; // obciecie tablicy do 4 elementow
+      console.log(f); // [0,1,2,3]
+
+      delete f[1];
+      console.log(f);
+
+      console.log(1 in f);
+      console.log(2 in f);
+
+      let g = Array(5).fill(7);
+      console.log(g);
+
+      //iteracja - przechodzenie po elementach tablicy;
+      let h = [99, 56, 45, "tekst"];
+
+      for (let i = 0; i < h.length; i++) {
+        console.log(h[i]);
+      }
+
+      let arr1 = ["el1", "ell2", 3, 98];
+
+      arr1.forEach(function (item, index) {
+        console.log("item:", item, "index:", index);
+
+        let arr2 = arr1.concat([1, 2, 3]);
+        console.log(arr2);
+
+        let strFromArr = arr1.join(arr2);
+        console.log("str:", strFromArr);
+
+        let arr4 = [1, 2, 3, 4];
+        console.log(arr4);
+        arr4.reverse();
+        console.log(arr4);
+
+        arr4.push(99);
+        console.log(arr4);
+
+        let arrEl = arr4.pop(); //pobiera (zabiera ) ostatni element z tablicy i przypisuje do nowej
+        console.log(arrEl);
+      });
+    </script>
+  </body>
+</html>
