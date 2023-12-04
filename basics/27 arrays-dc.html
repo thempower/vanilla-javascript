@@ -126,9 +126,51 @@ basics/26 arrays.html<!DOCTYPE html>
         //return a-b = 5 - 7 = -2;
         return a - b;
       }
-      let arr157 = [1, 2, 3, 4, 5, 20, 45, 33, 22];
+      let arr157 = [1, 2, 3, 4, 5, 20, 45, 33, 22, 115, 234, 54];
       let sortedArr157ok = arr157.sort(sortNumbers);
       console.log(sortedArr157ok);
+
+      let arr8 = sortedArr157ok.map(function (value, index, arr) {
+        return value * 2;
+      });
+      console.log(arr8);
+      let arr10 = sortedArr157ok.filter(function (value) {
+        return value > 100;
+      });
+      console.log(arr10);
+
+      let sum = arr8.reduce(function (accumulator, currentValue, index, array) {
+        return accumulator + currentValue;
+      });
+
+      console.log(sum);
+
+      let result = [1, 2, 3, 4].every(function (value, index, arr) {
+        return value > 0;
+      });
+      console.log(result);
+
+      const objects = [
+        { id: 0 },
+        { id: 1 },
+        { id: 2 },
+        { id: 3, name: "ania" },
+      ];
+
+      let obj = objects.find(function (o) {
+        return o.id == 2;
+      });
+      console.log(obj);
+
+      let objIndex = objects.findIndex(function (o) {
+        return o.id == 1;
+      });
+
+      console.log(objIndex); //
+
+      const fruits = ["jabloko", "malina", "cytryna"];
+      console.log(fruits.includes("malina")); //true;
+      console.log(fruits.includes("granat")); //false;
     </script>
   </body>
 </html>
