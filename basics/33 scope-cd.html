@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Strict mode od ES5
+      // Strict mode wprowadzony w ECMAScript 5 jest bardziej restrykcyjną wersją JavaScript co
+      // wymusza pisanie bardziej przemyślanego kodu. Pozwala na uniknięcie przypadkowego
+      // stworzenia zmiennej globalnej.
+      function doSomething() {
+        "use strict"; // strict mode włączony na poziomie funkcji
+        let a = 5;
+        //b = 10; // próba stworzenia zmiennej globalnej w strict mode
+        // będzie błąd
+      }
+      // kończy się błędem
+      // Uncaught ReferenceError: assignment to undeclared variable b
+      doSomething();
+
+      // Scope w funkcji
+      // Wywołana funkcja może zmienić wartość zmiennej globalnej.
+      let someData = 10;
+      function doSth() {
+        someData = 50;
+      }
+      doSth();
+      console.log(someData); // 50
+
+      // Scope, a pętla for z var
+      // Zmienna zadeklarowana wewnątrz bloku kodu jest widoczna poza nim np w pętli for, bo nie
+      // ma zakresu dostępnego dla funkcji.
+      // scope a pętla for
+      for (var i = 0; i < 5; i++) {
+        // jakieś działania
+      }
+      console.log(i); // dostęp do zmiennej i poza ciałem pętli, 5
+
+      // Scope, a instrukcja if z var
+      // Zmienna zadeklarowana wewnątrz bloku instrukcji warunkowej również będzie dostępna poza
+      // tym blokiem.
+      if (1 == 1) {
+        var someVarData = 8;
+      }
+      console.log(someVarData); // 8
+
+      /*
+        let i const posiadają zakres blokowy
+        var jest dostępne w każdej wersji JS, ale ogranicza się do zakresu lokalnego funkcji co ma swoje
+        ograniczenia, dlatego w ECMAScript 6 dodano dodatkowe deklaracje przy pomocy let i const,
+        które mają zasięg blokowy.
+        */
+
+      // let ma zakres blokowy
+      if (1 == 1) {
+        let someLetData = 8;
+      }
+      // Uncaught ReferenceError:
+      // someLetData is not defined
+      // console.log(someLetData); // będzie błąd
+    </script>
+  </body>
+</html>
