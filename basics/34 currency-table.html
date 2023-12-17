@@ -12,19 +12,24 @@
         background: #363d57;
       }
       .container {
+        padding: 20px;
         width: 400px;
         background: white;
         border-radius: 10px;
       }
       h3 {
         text-align: center;
+        margin: 20px 0;
       }
       .rate {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
-        margin: 10px;
+        margin: 15px;
         border-bottom: 1px dotted black;
+      }
+      .test {
+        color: red;
       }
     </style>
   </head>
@@ -70,7 +75,7 @@
           el.innerHTML = `
           <div>${code}</div>
           <div>${currency}</div>
-          <div>${rate} zł</div>
+          <div>${rate}zł</div>
           `;
 
           dataTableDiv.append(el);
