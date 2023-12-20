@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //function statement
+      function foo(arg1, arg2) {
+        console.log(arg1, arg2);
+      }
+      foo("test1", "test2");
+
+      // function expression
+      const addNums = function (a, b) {
+        return a + b;
+      };
+
+      console.log(addNums(3, 5));
+      console.log(addNums(15, 5));
+      console.log(addNums(345, 53));
+
+      console.log(typeof addNums);
+      console.dir(addNums);
+      console.dir(addNums.name);
+      console.dir(addNums.length);
+
+      addNums.something = "test";
+      console.log(addNums);
+      console.log(addNums.something);
+
+      // scope - zakres zmiennych w funkcji
+      let globalVariable = 44;
+      function testScope(arg1) {
+        "use strict";
+
+        let localVariable = 10;
+        console.log(arg1, localVariable); // lokalne zmienne;
+      }
+
+      testScope(7);
+
+      function testFunctions1() {
+        const data = 10;
+        const result1 = test2(8);
+        console.log("result1:", result1);
+
+        function test2(arg) {
+          let data = 100;
+          return arg + data;
+        }
+        const result2 = test2(18);
+        console.log("result2:", result2);
+      }
+      testFunctions1();
+
+      let testFuncExpr = function () {
+        console.log("tekst func expr");
+      };
+    </script>
+  </body>
+</html>
