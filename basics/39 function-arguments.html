@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function test(primitive, obj) {
+        console.log(arguments);
+        primitive = 34;
+        console.log(primitive, obj);
+        obj.name = "Karol";
+      }
+      let num = 100;
+      let objSource = { name: "Ola" };
+      test(num, objSource);
+      console.log("num: ", num); // 100
+      console.log("objSource.name: ", objSource.name);
+
+      function addAll() {
+        let result = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          result += arguments[i];
+        }
+        return result;
+      }
+
+      let result = addAll(12, 55, 34, 6, 25, 100, 22, 33);
+      console.log(result);
+    </script>
+  </body>
+</html>
